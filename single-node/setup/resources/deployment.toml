@@ -77,3 +77,6 @@ type="JKS"
 [oauth.token_persistence]
 persist_access_token=false
 keep_revoked_access_token = true
+
+[oauth.token_cleanup]
+enable=false

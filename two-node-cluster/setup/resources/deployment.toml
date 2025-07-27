@@ -85,3 +85,6 @@ members = ["member_ip_2:4000", "member_ip_1:4000"]
 [oauth.token_persistence]
 persist_access_token=false
 keep_revoked_access_token = true
+
+[oauth.token_cleanup]
+enable=false
