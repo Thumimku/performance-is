@@ -15,3 +15,9 @@ truncate_non_empty_table IDN_AUTH_SESSION_APP_INFO;
 GO
 truncate_non_empty_table IDN_AUTH_USER_SESSION_MAPPING;
 GO
+truncate_non_empty_table IDN_OAUTH2_REFRESH_TOKEN;
+GO
+truncate_non_empty_table IDN_OAUTH2_REVOKED_TOKENS;
+GO
+truncate_non_empty_table IDN_SUBJECT_ENTITY_REVOKED_EVENT;
+GO
