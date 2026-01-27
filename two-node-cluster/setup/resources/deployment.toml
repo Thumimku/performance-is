@@ -2,6 +2,7 @@
 hostname = "localhost"
 node_ip = "127.0.0.1"
 base_path = "https://$ref{server.hostname}:${carbon.management.port}"
+enable_admin_services = true
 
 [super_admin]
 username = "admin"
@@ -24,8 +25,8 @@ IsBulkImportSupported=false
 #data_source = "WSO2USER_DB"
 
 [database.identity_db]
-driver = "com.mysql.jdbc.Driver"
-url = "jdbc:mysql://wso2isdbinstance2.cd3cwezibdu8.us-east-1.rds.amazonaws.com:3306/IDENTITY_DB?useSSL=false&amp;rewriteBatchedStatements=true"
+driver = "{db_driver}"
+url = "{identity_db_url}"
 validation_query = "SELECT 1"
 username = "wso2carbon"
 password = "wso2carbon"
@@ -33,8 +34,8 @@ password = "wso2carbon"
 maxActive = "400"
 
 [database.shared_db]
-driver = "com.mysql.jdbc.Driver"
-url = "jdbc:mysql://wso2isdbinstance2.cd3cwezibdu8.us-east-1.rds.amazonaws.com:3306/REG_DB?useSSL=false&amp;rewriteBatchedStatements=true"
+driver = "{db_driver}"
+url = "{reg_db_url}"
 validation_query = "SELECT 1"
 username = "wso2carbon"
 password = "wso2carbon"
@@ -42,8 +43,8 @@ password = "wso2carbon"
 maxActive = "400"
 
 [database.user]
-driver = "com.mysql.jdbc.Driver"
-url = "jdbc:mysql://wso2isdbinstance2.cd3cwezibdu8.us-east-1.rds.amazonaws.com:3306/UM_DB?useSSL=false&amp;rewriteBatchedStatements=true"
+driver = "{db_driver}"
+url = "{user_db_url}"
 validation_query = "SELECT 1"
 username = "wso2carbon"
 password = "wso2carbon"
@@ -122,15 +123,10 @@ members = ["member_ip_2:4000", "member_ip_1:4000"]
 [oauth.grant_type.jwt]
 iat_validity_period=1440
 
-[[oauth.custom_grant_type]]
-name="urn:ietf:params:oauth:grant-type:token-exchange"
-grant_handler="org.wso2.carbon.identity.oauth2.grant.token.exchange.TokenExchangeGrantHandler"
-grant_validator="org.wso2.carbon.identity.oauth2.grant.token.exchange.TokenExchangeGrantValidator"
-[oauth.custom_grant_type.properties]
-IdTokenAllowed=true
-IATValidityPeriod="86400"
+[oauth.token_cleanup]
+enable=false
 
 [oauth.token_persistence]
-persist_access_token=false
+persist_access_token=true
 retain_revoked_access_token = true
 persist_refresh_token=true
