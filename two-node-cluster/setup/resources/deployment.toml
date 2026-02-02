@@ -2,7 +2,6 @@
 hostname = "localhost"
 node_ip = "127.0.0.1"
 base_path = "https://$ref{server.hostname}:${carbon.management.port}"
-enable_admin_services = true
 
 [super_admin]
 username = "admin"
@@ -17,14 +16,12 @@ type = "database_unique_id"
 #connection_password = "admin"
 #base_dn = "dc=wso2,dc=org"
 [user_store.properties]
-CaseInsensitiveUsername = "{is_case_insensitive_username_and_attributes}"
-CaseInsensitiveAttributes = "{is_case_insensitive_username_and_attributes}"
-UseCaseSensitiveUsernameForCacheKeys = false
+CaseInsensitiveUsername = false
 SCIMEnabled=true
 IsBulkImportSupported=false
 
-[realm_manager]
-data_source = "WSO2USER_DB"
+#[realm_manager]
+#data_source = "WSO2USER_DB"
 
 [database.identity_db]
 driver = "{db_driver}"
@@ -67,27 +64,6 @@ validation_query = "SELECT 1"
 username = "wso2carbon"
 password = "wso2carbon"
 [database.user.pool_options]
-maxActive = "1500"
-defaultAutoCommit=false
-testOnBorrow = true
-testWhileIdle = true
-validationInterval="30000"
-maxWait = "60000"
-minIdle = "5"
-validationQueryTimeout="1"
-commitOnReturn=false
-
-[session]
-data_source="jdbc/WSO2SessionDB"
-
-[datasource.WSO2SessionDB]
-id = "WSO2SessionDB"
-url = "{session_db_url}"
-username = "wso2carbon"
-password = "wso2carbon"
-driver = "{db_driver}"
-jmxEnabled = false
-[datasource.WSO2SessionDB.pool_options]
 maxActive = "1500"
 defaultAutoCommit=false
 testOnBorrow = true
@@ -170,10 +146,10 @@ members = ["member_ip_2:4000", "member_ip_1:4000"]
 [oauth.grant_type.jwt]
 iat_validity_period=1440
 
-[[oauth.custom_grant_type]]
-name="urn:ietf:params:oauth:grant-type:token-exchange"
-grant_handler="org.wso2.carbon.identity.oauth2.grant.token.exchange.TokenExchangeGrantHandler"
-grant_validator="org.wso2.carbon.identity.oauth2.grant.token.exchange.TokenExchangeGrantValidator"
-[oauth.custom_grant_type.properties]
-IdTokenAllowed=true
-IATValidityPeriod="86400"
+#[[oauth.custom_grant_type]]
+#name="urn:ietf:params:oauth:grant-type:token-exchange"
+#grant_handler="org.wso2.carbon.identity.oauth2.grant.token.exchange.TokenExchangeGrantHandler"
+#grant_validator="org.wso2.carbon.identity.oauth2.grant.token.exchange.TokenExchangeGrantValidator"
+#[oauth.custom_grant_type.properties]
+#IdTokenAllowed=true
+#IATValidityPeriod="86400"
