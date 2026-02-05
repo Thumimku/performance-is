@@ -472,7 +472,6 @@ if (y == 0) {
   },&#xd;
   &quot;advancedConfigurations&quot;: {&#xd;
   	&quot;skipLoginConsent&quot;: true,&#xd;
-  	&quot;enableAPIBasedAuthentication&quot;: true&#xd;
   },&#xd;
   &quot;authenticationSequence&quot;: {&#xd;
     &quot;type&quot;: &quot;DEFAULT&quot;,&#xd;
