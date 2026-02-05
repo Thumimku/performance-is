@@ -471,7 +471,7 @@ if (y == 0) {
     }&#xd;
   },&#xd;
   &quot;advancedConfigurations&quot;: {&#xd;
-  	&quot;skipLoginConsent&quot;: true,&#xd;
+  	&quot;skipLoginConsent&quot;: true &#xd;
   },&#xd;
   &quot;authenticationSequence&quot;: {&#xd;
     &quot;type&quot;: &quot;DEFAULT&quot;,&#xd;
