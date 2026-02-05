@@ -229,7 +229,7 @@ if (y == 0) {
         &quot;type&quot;: &quot;Default&quot;,&#xd;
         &quot;userAccessTokenExpiryInSeconds&quot;: 3600,&#xd;
         &quot;applicationAccessTokenExpiryInSeconds&quot;: 3600,&#xd;
-        &quot;bindingType&quot;: &quot;device-flow&quot;,&#xd;
+        &quot;bindingType&quot;: &quot;None&quot;,&#xd;
         &quot;revokeTokensWhenIDPSessionTerminated&quot;: false,&#xd;
         &quot;validateTokenBinding&quot;: false&#xd;
       },&#xd;
