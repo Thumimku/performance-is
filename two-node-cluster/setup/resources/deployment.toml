@@ -153,3 +153,6 @@ iat_validity_period=1440
 #[oauth.custom_grant_type.properties]
 #IdTokenAllowed=true
 #IATValidityPeriod="86400"
+
+[oauth.token_cleanup]
+enable=false
