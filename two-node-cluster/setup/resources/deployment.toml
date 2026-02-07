@@ -156,3 +156,8 @@ iat_validity_period=1440
 
 [oauth.token_cleanup]
 enable=false
+
+[oauth.token_persistence]
+persist_access_token=false
+retain_revoked_token = true
+persist_refresh_token=false
