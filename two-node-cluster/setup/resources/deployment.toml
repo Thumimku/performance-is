@@ -160,4 +160,4 @@ enable=false
 [oauth.token_persistence]
 persist_access_token=false
 retain_revoked_token = true
-persist_refresh_token=false
+persist_refresh_token=true
