@@ -322,6 +322,8 @@ else
     token_issuer="JWT"
 fi
 
+echo "Token issuer selected: $token_issuer"
+
 declare -ag heap_sizes_array
 if [ ${#heap_sizes[@]} -eq 0 ]; then
     heap_sizes_array=( $default_heap_sizes )

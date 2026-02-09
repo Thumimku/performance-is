@@ -158,6 +158,6 @@ iat_validity_period=1440
 enable=false
 
 [oauth.token_persistence]
-persist_access_token=false
+persist_access_token= false
 retain_revoked_token = true
-persist_refresh_token=true
+persist_refresh_token= false

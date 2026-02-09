@@ -119,7 +119,7 @@
           </elementProp>
           <elementProp name="tokenIssuer" elementType="Argument">
             <stringProp name="Argument.name">tokenIssuer</stringProp>
-            <stringProp name="Argument.value">${__P(tokenIssuer,Default)}</stringProp>
+            <stringProp name="Argument.value">${__P(tokenIssuer,JWT)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
